@@ -1,0 +1,26 @@
+<div class="card-panel orange lighten-3">
+    <p>Indice <input type="number" ng-model="indexInfo"></p>
+    <p> Nombre: <input type="text" ng-model="nameInfo" ></p>
+    <p> Cantidad: <input type="number" ng-model="quanInfo" ></p>
+    <p> Extra: <input type="text" ng-model="extraInfo" ></p>
+    <button class="btn" ng-click="insertInfo()">Agregar</button>
+    <button class="btn" ng-click="editInfo()">Editar</button>
+    </div>
+
+    <table class="bordered">
+        <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Cantidad</th>
+        <th>Informacion Extra</th>
+        </tr>
+        <tr ng-repeat="obj in objects">
+            <td>{{$index}}</td>
+            <td>{{obj.nombre}}</td>
+            <td>{{obj.cantidad}}</td>
+            <td>{{obj.extra}}</td>
+        </tr>
+        
+
+</table>
+

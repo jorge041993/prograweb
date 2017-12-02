@@ -1,0 +1,109 @@
+<head>
+  <title>Progra</title>
+</head>
+
+<body class="amber lighten-4" ng-app="example">
+    
+    <div ng-controller="control" class="container">
+      <header class="card-panel orange darken-3">
+          <h1><a href="#" class="brand-logo black-text">Programacion Web</a></h1></header>  
+<nav>
+    <div class="nav-wrapper orange darken-3">
+      <ul id="nav-mobile" class="right">
+          <li><login-buttons></login-buttons></li>
+        <li><a  ui-sref="main">Main</a></li>
+        <li><a  ui-sref="lista">Lista</a></li>
+        <li><a ui-sref="clase">Formulario</a></li>
+        <li><a  ui-sref="texto">Clase</a></li>
+        <li><a ui-sref="insertar">Insertar</a></li>
+        <li><a ui-sref="remover">Remover</a></li>
+        <li><a ui-sref="exam">Jorge</a></li>
+        <li><a ui-sref="maritza">Maritza</a></li>
+        <li><a ui-sref="guillermo">Guillermo</a></li>
+        
+      </ul>
+    </div>
+  </nav>
+
+  <nav>
+      <div class="nav-wrapper orange darken-3">
+        <ul id="nav-mobile" class="right">
+            <li><a ui-sref="tarea">Tarea</a></li>
+            <li><a ui-sref="examen5">examen</a></li>
+          </ul>
+        </div>
+  </nav>        
+<div ui-view=""></div>
+        
+<!--
+
+<nav>
+    <div class="nav-wrapper teal lighten-1">
+      <a href="#" class="brand-logo">Progra Web</a>
+      <ul id="nav-mobile" class="right">
+        <li><a ng-click="shw = 1" href="#">Main</a></li>
+        <li><a ng-click="shw = 2" href="#">Lista</a></li>
+        <li><a ng-click="shw = 3" href="#">Formulario</a></li>
+        <li><a ng-click="shw = 4" href="#">Clase</a></li>
+      </ul>
+    </div>
+  </nav>
+
+     <lista-comp  ng-show="shw===2"></lista-comp>
+    <texto-comp  ng-show="shw===4"></texto-comp>
+    <clase-comp  ng-show="shw===3"></clase-comp>
+
+<div ng-show="shw===1" class="card-panel teal lighten-4">You Only Need Music</div>
+        
+-->
+
+
+        <!---Implementar Template--->
+         
+    <!--<lista-comp  ng-show="shw===2"></lista-comp>
+    <texto-comp  ng-show="shw===4"></texto-comp>
+    <clase-comp  ng-show="shw===3"></clase-comp>-->
+        
+    <lista-comp  ng-show="shw===2"></lista-comp>
+    <texto-comp  ng-show="shw===4"></texto-comp>
+    <clase-comp  ng-show="shw===3"></clase-comp>
+    <insertar-comp ng-show="shw===5"></insertar-comp>
+    <remover-comp ng-show="shw===6"></remover-comp>
+    <exam-comp ng-show="shw===7"></exam-comp>
+    <maritza-comp ng-show="shw===8"></maritza-comp>
+    <guillermo-comp ng-show="shw===9"></guillermo-comp>
+    <tarea-comp ng-show="shw===10"></tarea-comp>
+    <examen5-comp ng-show="shw===11"></examen5-comp>   
+
+        
+        
+        
+    <footer class="page-footer orange darken-3">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
+    </div>
+        
+</body>
+

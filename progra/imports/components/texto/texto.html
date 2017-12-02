@@ -1,0 +1,30 @@
+<p>Mensaje: <input type="text" ng-model="$ctrl.nombre" ng-keypress="kPress($event)"></p>
+   
+ <!-- <h1>{{dolares}} dolares son {{dolares *cambio}} pesos</h1>-->
+    
+        <h4>{{$ctrl.nombre}}</h4>
+        <h4 ng-bind="$ctrl.nombre"></h4>
+        
+        <ul ng-repeat="mov in $ctrl.moviesArray">
+           <li>{{$ctrl.mov}}</li> 
+        </ul>
+        
+        <table ng-mouseenter="$ctrl.msEnter()" ng-mouseleave="$ctrl.msExit()" ng-mousemove= "$ctrl.msMove($event)" class="bordered highlight">
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Clasificacion</th>
+                <th>Popularidad</th>
+                <th>Imagen</th>
+            </tr>
+            <tr ng-repeat="P in $ctrl.movieObject">
+                <td>{{P.Num}}</td>
+                <td>{{P.Nom}}</td>
+                <td>{{P.Clas}}</td>
+                <td>{{P.Pop}}</td>
+                <td><a href={{P.Ref}}><img ng-src="../public/Image/{{P.Im}}" width="100" height="100" ></a></td>
+            </tr>
+        </table>
+
+<p>El mouse entró {{$ctrl.countEnter}} veces a la tabla y se salio {{$ctrl.countExit}} veces.</p>
+ <p>Contador de movimiento: X.- {{$ctrl.moveX}} Y.- {{$ctrl.moveY}}</p>

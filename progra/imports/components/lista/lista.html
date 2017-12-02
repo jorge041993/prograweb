@@ -1,0 +1,13 @@
+<div class="card-panel orange lighten-3">
+<header>
+    <h2>{{$ctrl.ttl}}</h2>
+</header>
+    <p> Tarea: <input type="text" ng-model="$ctrl.txtTarea" ></p>
+    <button class="btn" ng-click="$ctrl.addTarea()">Agregar</button>
+
+<ul>
+    <li ng-repeat="str in $ctrl.lst">
+    {{str.tarea}}
+    </li>
+</ul>
+    </div>

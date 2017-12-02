@@ -1,0 +1,14 @@
+<div class="card-panel lime lighten-4">
+    <p>Filas: <input type="number" ng-model="fila"></p>
+    <p>Columnas: <input type="number" ng-model="col"></p>
+    <button class="btn" ng-click="tabla()">Insertar</button>
+</div>
+
+
+<ol>
+    <li ng-repeat="str in $ctrl.lst track by $index">
+    {{str.Filas}} {{str.Columnas}}
+    </li>
+</ol>
+   
+ 

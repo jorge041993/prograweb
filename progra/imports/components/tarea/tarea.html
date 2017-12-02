@@ -1,0 +1,34 @@
+<h1>DAR ALTAS Y BAJAS DE ALUMNOS</h1>
+<div class="card-panel orange lighten-3">
+    <p>No. control <input type="number" ng-model="indexInfo"></p>
+    <p> Nombre(s): <input type="text" ng-model="nameInfo" ></p>
+    <p> Apellido P.: <input type="text" ng-model="apellidopInfo" ></p>
+    <p> Apellido M: <input type="text" ng-model="apellidomInfo" ></p>
+    <p> Activo: <input type="number" ng-model="activoInfo" ></p>
+    <p> Descripcion: <input type="text" ng-model="descripcionInfo" ></p>
+    <p> Nombre a remover: <input type="text" ng-model="nameRemove" ></p>
+    <button class="btn" ng-click="insertInfo()">Agregar</button>
+    <button class="btn" ng-click="editInfo()">Editar</button>
+    <button class="btn" ng-click="removeInfo()">Eliminar</button>
+    </div>
+
+    <table class="bordered">
+        <tr>
+        <th>#</th>
+        <th>Nombre</th>
+        <th>Apellido P</th>
+        <th>Apellido M</th>
+        <th>Activo</th>
+        <th>Descripcion</th>
+        </tr>
+        <tr ng-repeat="obj in objects">
+            <td>{{$index}}</td>
+            <td>{{obj.nombre}}</td>
+            <td>{{obj.apellidop}}</td>
+            <td>{{obj.apellidom}}</td>
+            <td>{{obj.activo}}</td>
+            <td>{{obj.descripcion}}</td>
+        </tr>
+        
+
+</table>

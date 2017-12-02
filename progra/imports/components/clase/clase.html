@@ -1,0 +1,37 @@
+ <div class="row">
+            <div class="col s12 m8 l6 offset-m2 offset-l3 card-panel orange lighten-3">
+                <h3>Formulario</h3>
+                <p>E-mail:<input type="email" ng-model="$ctrl.mail"></p>
+                <p>Edad: <input type="radio" name="age" value="1" id="rad1" ng-model="$ctrl.age"><label for="rad1" class="black-text">- 18</label>
+                    <input type="radio"  name="age" value="2" id="rad2" ng-model="$ctrl.age"><label for="rad2" class="black-text"> 18 a 35</label>
+                    <input type="radio"  name="age" value="3" id="rad3" ng-model="$ctrl.age"><label for="rad3" class="black-text">36 a 64</label>
+                    <input type="radio"  name="age" value="4" id="rad4" ng-model="$ctrl.age"><label for="rad4" class="black-text">65 + </label>
+                </p>
+                 <p>
+                    <input type="checkbox" id="ckSus"><label for="ckSubs" ng-model="$ctrl.Subscripcion">Deseo recibir informacion de la pagina</label>
+                </p>
+                <select ng-model="$ctrl.libro" class="browser-default">
+                    <option>Guerra de los Mundos</option>
+                    <option>It</option>
+                    <option>El esclavo</option>
+                    <option>Cartas a John</option>
+                    <option>Pideme lo que quieras</option>
+                </select>
+                
+                <button ng-click="$ctrl.btnClick()" class="btn">Agregar</button>
+            </div>
+        </div>
+        
+        
+         <table class="bordered highlight">
+            <tr>
+                <th>Correo</th>
+                <th>Edad </th>
+                <th>Libro</th>
+            </tr>
+            <tr ng-repeat="P in $ctrl.Agregar">
+                <td>{{P.Correo}}</td>
+                <td>{{P.Edad}}</td>
+                <td>{{P.Libro}}</td>
+            </tr>
+        </table>
