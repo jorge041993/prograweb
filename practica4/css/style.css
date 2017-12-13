@@ -1,0 +1,7 @@
+.bck1{
+    background-image: url("../img/background1.jpg"); /*Se regresa a la carpeta*/
+    background-size: cover; /*agarrar la imagen y se usa en todo el componente*/
+    background-repeat: no-repeat;
+    height: 200px; /*Tamaño 200 px;*/
+    margin: 0; /*No espacios entre componente y lo demás*/
+}

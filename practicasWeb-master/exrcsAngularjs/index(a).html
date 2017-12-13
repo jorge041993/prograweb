@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+	<title>Angular</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<h1 class="text-muted"><b>Libros</b></h1>
+		<br/>
+	</div>
+	<div class="container" ng-controller="StoreController as store">
+		<div class="row" ng-repeat="book in store.books" ng-init="books = historys">
+			<!--<div class="col-xs-12 col-sm-12 bg-info">-->
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<img class="img-responsive" ng-src="{{book.img}}"/>
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-9">
+				<a><h3>{{book.titulo}}</h3></a>
+				<br/>
+				<h4><b>{{book.editorial}}</b></h4>
+				<h4>{{book.descripcion}}</h4>
+			</div>
+			<!--</div>-->
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<br/>
+				<br/>
+				<br/>
+			</div>
+		</div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+body{
+    background-image: url("../img/robot.jpg"); /*Se regresa a la carpeta*/
+    background-size: cover; /*agarrar la imagen y se usa en todo el componente*/
+    background-repeat: no-repeat;
+    height: 200px; /*Tamaño 200 px;*/
+    margin: 0; 
+}
+p{
+    color: blue;
+}
+h1{
+    color: red;
+}
+h2 h5{
+    color: green;
+}

@@ -1,0 +1,13 @@
+.bck1{
+    background-image: url("../img/background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 200px;
+    margin: 0 auto;
+}
+.cartas{
+    
+    display: inline-table;
+    margin: auto;
+    vertical-align: sub;   
+}

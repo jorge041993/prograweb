@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>elementos HTML</title>
+
+    <!--usamos etiqueta style para darle un fondo a la pagina web y cambiar tipo de letra-->
+    <style>
+     body{
+        background: url(38.jpg);
+        font-family: Aharoni;
+     }
+
+     .fondo{
+        width: 965px;
+        background: darkcyan;
+        margin: auto;
+        border-radius: 25px;
+        text-align: center;
+     }
+    </style>
+
+</head>
+<body>
+    <!--utilamos etiqueta div para dividir la pagina meter otro fondo donde va la 
+    informacion de la pagina y tenga un aspecto agradable y creamos una clase dentro del div 
+    para mandar a llamarla desde el style y se lo primero en ejecutarse-->
+    <div class="fondo">
+    <h1>5 Nuevos elementos HTML</h1>
+    <h3>Jorge Antonio Sanchez Duarte 12550547</h3>
+    <!--etiqueta de reproducto de video-->
+    <video src="http://v2v.cc/~j/theora_testsuite/320x240.ogg" controls>
+        Tu navegador no implementa el elemento <code>video</code>.
+      </video>
+
+    <!--etiqueta para reproductor de musica--> 
+    <audio src="musica.mp3" controls="controls" type="audio/mpeg" preload="preload">
+    </audio>
+
+    <!--utlizacoion del parametro borde para darle una estructura con borde a una tabla y el ancho y largo-->
+   <table border="1px" width="200px" height="200px">
+        <tr>
+            <td >
+                alumno
+            </td>
+            <td>
+                100
+             </td>
+        </tr>
+    </table>
+    </div>
+
+</body>
+</html>

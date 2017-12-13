@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="store">
+<head>
+	<title>Angular</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body ng-controller="BooksController as store">
+	<div class="container-fluid">
+		<h1 class="text-muted"><b>Libros</b></h1>
+	</div>
+	<br/>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-12">
+				<span><b>Buscar</b></span>
+				<span>&nbsp&nbsp&nbsp&nbsp</span>
+				<span>Titulo: <input type="text" ng-model="search"></span>
+				<span>&nbsp&nbsp&nbsp&nbsp</span>
+				<span><b>Ordenar</b></span>
+				<select ng-model="val">
+					<option value="'titulo'">titulo</option>
+					<option value="'editorial'">editorial</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<br/>
+	<div class="container">
+		<div class="row" ng-repeat="book in store.books | filter:search | orderBy:val">
+			<!--<div class="col-xs-12 col-sm-12 bg-info">-->
+			<div class="col-xs-12 col-sm-4 col-md-3">
+				<img class="img-responsive" ng-src="{{book.img}}"/>
+			</div>
+			<div class="col-xs-12 col-sm-8 col-md-9">
+				<a><h3>{{book.titulo}}</h3></a>
+				<br/>
+				<h4><b>{{book.editorial}}</b></h4>
+				<h4>{{book.descripcion}}</h4>
+			</div>
+			<!--</div>-->
+			<div class="col-xs-12 col-sm-12 col-md-12">
+				<br/>
+				<br/>
+				<br/>
+			</div>
+		</div>
+	</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>

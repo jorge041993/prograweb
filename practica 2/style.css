@@ -1,0 +1,96 @@
+*{
+    background-color: white;
+   /* border: 1px groove black;*/
+}
+
+h1{
+    background-color: rgb(0, 3, 173);/*RGB*/
+    color: #CEFC00;/*RGB HEXAMDECIMAL*/
+    /*background-color: hsl(178, 68%, 50%);HSL*/
+    /*color: rgba(163, 181,247, 0.5)*/
+}
+
+a{
+  text-transform: capitalize;  
+  color: purple;
+}
+
+p{
+    text-align: justify;
+    width: 75%;
+    min-width: 100px;/*restriccion del tamaño*/
+    max-width: 250px;
+    /*height: 60px; Se puede determinar alto del elemento manualmente*/
+   /* padding: 30px;*/
+    padding: 20px 5px 20px 5px;
+    /*padding-bottom: 50px*/
+    /*margin: 50px;margin asigna manualmente*/
+    margin: auto;
+    overflow: scroll;
+    max-height: 100px;
+}
+li{
+    font-size: 30px;
+    font-size: 150%;
+    font-size: 1.5em;
+    line-height: 1.1em;
+    word-spacing: 0.2em;
+    letter-spacing: 0.1;
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    
+}
+
+.enlace{
+    font-family: Arial, Helvetica, sans-serif;
+    color: teal;
+}
+.info{
+    /*border-style: solid;
+    border-width: 1px 3px 5px  7px;
+    border-color: red; TODO EL BORDE*/
+   /* border-bottom-style: double;
+    border-bottom-width: 5px;
+    border-bottom-color: purple; 
+    border-top-style: dotted;
+    border-top-width: 10px;
+    border-top-color: teal; CADA LADO DEL BORDE*/
+    /*border: 3px solid rgb(30,210,140);/*SIMPLIFICADO*/
+    /*border-radius: 15px;*/
+    width: 80%;
+}
+#google{
+    font-family: Impact, sans-serif;
+    color: black;
+}
+
+body{ /*sirve para poner una imagen de fondo a todo el body*/
+    background: url(progra.jpg);
+}
+
+a:hover{ /*el hover sirve para subrayar de color el de los links*/
+    background: #B4A201;
+  }
+/*El modelo de caja nos permite agregar un borde alrededor de los elementos, 
+y definir el espacio entre los elementos.*/
+  main{
+    width: 300px;
+    border: 25px solid green;
+    padding: 25px;
+    margin: 25px;
+  }
+   .contenido{/*sirve para darle un margen en el medio a la pagina*/
+    width: 965px;
+    background: #7C0101;
+    margin: auto;
+    border-radius: 25px;  
+   }
+
+   /*se utiliza la width propiedad para determinar el ancho del campo de entrada:*/
+   input { 
+    width: 100%;
+}
+
+ 
