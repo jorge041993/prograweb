@@ -1,0 +1,1746 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <title>Peliculas-HD</title>
+</head>
+
+
+<body class="fondo">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+
+  <div ng-app="4p8" ng-controller="index">
+    <nav>
+      <div class="nav-wrapper light-blue accent-4">
+        <a href="#" class="brand-logo right">Peliculas-HD</a>
+        <ul>
+          <li ng-click="mostrarInicio()"><a>Inicio</a></li>
+          <li ng-click="mostrarPeliculas()"><a>Peliculas</a></li>
+          <li ng-click="mostrarSeries()"><a>Series</a></li>
+          <li ng-click="mostrarNoticias()"><a>Proximamente</a></li>
+          <li ng-click="mostrarPedidos()"><a>Pedidos</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div ng-show=showInicio>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Peliculas Destacadas</h5>
+          <br><br>
+        </div>
+
+        <div class="container">
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://www.espaciomarvelita.com/wp-content/uploads/2012/04/3.jpg" width="150" height="180" ng-click="mostrarWatchmen()"></a>
+              <p>Watchmen</p>
+            </div>
+            </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/6492.jpg" width="150" height="180" ng-click="mostrarAvengers()"></a>
+              <p>Avengers</p>
+            </div> 
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://fotos.lahora.com.ec/cache/4/4a/4a2/4a2a/marvel-anuncia-el-final-de-los-4-fantasticos--sera-cierto-2-2015058063935-4a2ae3d2e83ebba221b41a17278cddfd.jpg" width="150" height="180" ng-click="mostrarFantastic()">
+              <p>Fant4stic</p>
+            </div>  
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://3.bp.blogspot.com/-kLF71rex3HU/VUKrhSeogoI/AAAAAAAAAFE/RFEi3JipJBM/s1600/Capit_n_Am_rica_El_soldado_de_invierno-333149071-large.jpg" width="150" height="180" ng-click="mostrarCapitan()"></a>
+              <p>Capitan America</p>
+            </div>  
+          </div>
+        </div>
+      
+        
+
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <br><br>
+          <h5 class="post">Peliculas Recien Agregadas</h5>
+          <br><br>
+        </div>
+
+        <div class="container">
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://actualidadcomic.com/wp-content/uploads/2008/04/the-incredible-hulk-poster.jpg" width="150" height="180" ng-click="mostrarHulk()"></a>
+              <p>Hulk</p>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://www.todomarvel.cabezascortadas.com/wp-content/uploads/2014/03/poster-x-men-futuro-pasado.jpg" width="150" height="180" ng-click="mostrarXmen()"></a>
+              <p>X-Men</p>
+            </div> 
+          </div>  
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://www.espaciomarvelita.com/wp-content/uploads/2013/08/poster-final-thor-el-mundo-oscuro.jpg" width="150" height="180" ng-click="mostrarThor()"></a>
+              <p>Thor</p>
+            </div>  
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="https://s-media-cache-ak0.pinimg.com/736x/82/d2/5b/82d25b943e9c7a1f9e801f498461d4f6.jpg" width="150" height="180" ng-click="mostrarCivil()"></a>
+              <p>Civil War</p>
+            </div>
+            <br><br> 
+          </div>
+        </div>
+
+
+        <div class="container">
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://i267.photobucket.com/albums/ii312/fenom_photo/the-conjuring.jpg" width="150" height="180" ng-click="mostrarConjuro()"></a>
+              <p>El Conjuro</p>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="https://s-media-cache-ak0.pinimg.com/236x/27/b5/94/27b59472896df5bf91a9f99549e19821.jpg?noindex=1" width="150" height="180" ng-click="mostrarHuerfana()"></a>
+              <p>La Huerfana</p>
+            </div> 
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="https://s-media-cache-ak0.pinimg.com/564x/c6/6d/fc/c66dfc3a79919def70b9af02d8d7f14b.jpg" width="150" height="180" ng-click="mostrarTheBoy()"></a>
+              <p>The Boy
+            </div>  
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdzgYZzNTP8JCbi8Gk57nlZnCrsIe7zqNN6Nam4cBwhvZOBkPX7w" width="150" height="180" ng-click="mostrarHallowen()"></a>
+              <p>Halloween</p>
+            </div> 
+            <br><br>
+          </div>
+        </div>
+
+        <div class="container">
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://st-listas.20minutos.es/images/2014-01/375686/4311406_640px.jpg?1475708599" width="150" height="180" ng-click="mostrarSaw1()"></a>
+              <p>SAW</p>
+            </div>
+          </div> 
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRK1A5KuZR4i4zwP4L55rtsbbRygPZEepBweoi9dXH-ZYud2Wdr" width="150" height="180" ng-click="mostrarSaw2()"></a>
+              <p>SAW ll</p>
+            </div> 
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://www.aullidos.com/imagenes/caratulas/saw3.jpg" width="150" height="180" ng-click="mostrarSaw3()"></a>
+              <p>SAW lll</p>
+            </div>  
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://st-listas.20minutos.es/images/2014-01/375686/4311409_640px.jpg?1475708599 width="150" height="180" ng-click="mostrarSaw4()"></a>
+              <p>SAW lV</p>
+            </div>  
+            <br><br>
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+        <!-- Termina show-Inicio -->
+
+      <!-- Empieza show-Peliculas -->
+
+      <div ng-show=showPeliculas>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Catalogo de Peliculas</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l3">
+          <h1>hola</h1>
+          </div>
+        </div>
+
+
+      
+        
+
+        
+
+      
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Peliculas -->
+
+      <!-- Empieza show-Series -->
+
+      <div ng-show=showSeries>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Proximamente</h5>
+          <br><br>
+        </div>
+
+        <div class="col s12 m12 l4 offset-l1  ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://screeninvasion.com/wp-content/uploads/2012/07/Breaking-Bad-Season-Five-Poster.jpeg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Breaking Bad 5<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=fn0kicvn4VA" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Breaking Bad 5<i class="material-icons right">close</i></span>
+              <p>Después de borrar toda evidencia que vincula a la muerte de Gustavo Fring, Walter White reanuda cocinando metanfetamina iniciando una nueva operación cuando Mike Ehrmantraut se une a Walt y Jesse como distribuidor, aunque desconfía de su proveedora de metilamina Lydia Rodarte-Quayle, una ejecutiva naviera con Madrigal electromotriz GmbH, la compañía matriz de de los restaurantes de Gus Fring los Pollos Hermanos. </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m12 l4 offset-l2 ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://www.hobbyconsolas.com/sites/hobbyconsolas.com/public/media/image/2016/07/better-call-saul-mejores-series-movistar-yomvi.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Better Call Saul<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=jJ1SKlVzhss" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Better Call Saul<i class="material-icons right">close</i></span>
+              <p>Better Call Saul es una serie de televisión estadounidense creada por Vince Gilligan y Peter Gould. Se trata de un spin off precuela de Breaking Bad.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <br><br>
+          <h5 class="post">Lo Mas Visto</h5>
+          <br><br>
+        </div>
+
+        <div class="container">
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://www.mubis.es/media/covers/2725/9808/breaking-bad-primera-temporada-original.jpg" width="150" height="180" ng-click="mostrarHulk()"></a>
+              <p>Br/Ba T1</p>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://elfinalde.com/wp-content/uploads/2016/01/7FwD7IuyHy6xl18LDIRxjl7vDbo.jpg" width="150" height="180" ng-click="mostrarXmen()"></a>
+              <p>Br/Ba T2</p>
+            </div> 
+          </div>  
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://seriesnid.net/wp-content/uploads/2015/12/Breaking-Bad-Temporada-3-Poster1.jpg" width="150" height="180" ng-click="mostrarThor()"></a>
+              <p>Br/Ba T3</p>
+            </div>  
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://3.bp.blogspot.com/-TuRIt7Ncw-E/UpCyx8vZQLI/AAAAAAAACSU/Nk0OGc4zDlc/s1600/breakingbad.jpg" width="150" height="180" ng-click="mostrarCivil()"></a>
+              <p>Br/Ba T4</p>
+            </div> 
+             <br><br>
+          </div>
+        </div>
+        
+        <div class="container">
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://images.buydvdus.com/Upload/uploadfiles/how-i-met-your-mother-0.jpg" width="150" height="180" ng-click="mostrarHulk()"></a>
+              <p>himym 1</p>
+            </div>
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://www.tododvdfull.com/wp-content/uploads/2015/02/HIMYM-02.jpg" width="150" height="180" ng-click="mostrarXmen()"></a>
+              <p>himym 2</p>
+            </div> 
+          </div>  
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://intlportal2.s3.foxfilm.com/intlportal2/dev-temp/en-GB/____538f9adbe5ead.jpg" width="150" height="180" ng-click="mostrarThor()"></a>
+              <p>himym 3</p>
+            </div>  
+          </div>
+
+          <div class="col s12 m6 l3">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://4.1m.yt/ggB9t_h.jpg" width="150" height="180" ng-click="mostrarCivil()"></a>
+              <p>himym 4</p>
+            </div> 
+            <br><br>
+          </div>
+        </div>
+
+      
+
+
+        
+
+        
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Series -->
+
+      <!-- Empieza show-Noticias -->
+
+      <div ng-show=showNoticias>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Peliculas Proximas a Estrenar</h5>
+          <br><br>
+        </div>
+        <div class="col s12 m12 l3 offset-l1 ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://cines.com/files/2016/06/resident-evil-final-chapter.jpe">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Resident Evil<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=TND-VkIrEUI" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Resident Evil<i class="material-icons right">close</i></span>
+              <p>La historia de Resident Evil: The Final Chapter continúa justo donde se quedó al final de “Resident Evil: Venganza”: la humanidad está en las últimas después de que Wesker traicione a Alice en Washington D.C. Como única superviviente de lo que debería haber sido la última batalla de la humanidad contra las hordas de los no muertos, Alice deberá regresar al lugar donde empezó la pesadilla.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m12 l3 offset-l1 ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://cines.com/files/2016/06/lego-batman-compressor.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">LEGO Batman<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=nY42RllYdIU" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">LEGO Batman<i class="material-icons right">close</i></span>
+              <p>LEGO Batman: La película spin-off de La LEGO Película, en la que el personaje principal será Batman, y su titánica lucha por evitar que JOKER destruya la ciudad de Gotham.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m12 l3 offset-l1 ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://cines.com/files/2016/06/la-torre-oscura-compressor.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">La Torre Oscura<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=wy_bnqj-P90" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">La Torre Oscura<i class="material-icons right">close</i></span>
+              <p>En un mundo extrañamente parecido al nuestro, Roland Deschain de Gilead persigue a su enemigo, el hombre de negro. Roland, solitario, quizá maldito, conoce a Jake, un chico de Nueva York pero de otro tiempo, y ambos unen sus destinos.</p>
+            </div>
+          </div>
+          <br><br>
+        </div>
+
+        <div class="col s12 m12 l3 offset-l1 ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://cines.com/files/2016/06/guardianes-galaxia-2-compressor.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Guardianes de la Galaxia 2<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=cbzLQOcGL9Y" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Guardianes de la Galaxia 2<i class="material-icons right">close</i></span>
+              <p>Secuela de Guardianes de la Galaxia. James Gunn, se encarga nuevamente del guión y dirección de esta secuela donde descubriremos al misterioso padre de Peter Quill, a.k.a. Star Lord, a la vez que a un nuevo y poderoso villano del Universo Marvel.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m12 l3 offset-l1 ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://cines.com/files/2016/06/dos-policias-rebeldes-3-compressor.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Bad Boys 3<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=dxP-GwzKv0E" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Bad Boys 3<i class="material-icons right">close</i></span>
+              <p>Tercera entrega de la saga de acción protagonizada por Will Smith y Martin Lawrence.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m12 l3 offset-l1 ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://cines.com/files/2016/06/kingsman-2-compressor.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Kingsman 2<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=aRYTyzJMke4" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Kingsman 2<i class="material-icons right">close</i></span>
+              <p>Secuela de ‘Kingsman. Servicio secreto‘ (2014). En esta ocasión la película se desarrollará en una versión americana de la agencia británica Kingsman.</p>
+            </div>
+          </div>
+          <br><br>
+        </div>
+
+        <div class="col s12 m12 l3 offset-l1 ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://cines.com/files/2016/06/transformers-last-knight-compressor.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Transformers: El Último Caballero<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=8-Be07A0yV4" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Transformers: El Último Caballero<i class="material-icons right">close</i></span>
+              <p>La siguiente entrega de la saga tras “Transformers: la Era de la Extinción” recibirá el título de “Transformers: The Last Knight” (Transformers: El Último Caballero). Michael Bay podría trasladar a Optimus Prime al espacio en busca de los Creadores.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m12 l3 offset-l1 ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://cines.com/files/2016/06/cars-3-compressor.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Cars 3<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=09LzPuNMqdY" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Cars 3<i class="material-icons right">close</i></span>
+              <p>Tercera película de Pixar protagonizada por Rayo McQueen y su inseparable amigo Mate que tendrán que enfrentarse a nuevas aventuras y superarlas unidos.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col s12 m12 l3 offset-l1 ">
+          <div class="card small ">
+            <div class="card-image waves-effect waves-block waves-light">
+              <img class="activator" src="http://cines.com/files/2016/06/star-wars-viii-compressor.jpg">
+            </div>
+            <div class="card-content">
+              <span class="card-title activator grey-text text-darken-4">Star Wars: Episodio VIII<i class="material-icons right">more_vert</i></span>
+              <p><a href="https://www.youtube.com/watch?v=pQz9eZeo-Ao" target="_blank">Ver más</a></p>
+            </div>
+            <div class="card-reveal">
+              <span class="card-title grey-text text-darken-4">Star Wars: Episodio VIII<i class="material-icons right">close</i></span>
+              <p>Octavo episodio de la saga. Continuará la historia de Luke Skywalker, Rey y Finn en su lucha contra la Primera Orden.</p>
+            </div>
+          </div>
+        </div>
+
+        </div> 
+        </div>
+        </div>
+
+
+        <!-- Termina show-Noticias -->
+
+      <!-- Empieza show-Pedidos -->
+      <div ng-show=showPedidos>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Realizar Pedido</h5>
+          <br><br>
+        </div>
+      <form class="col s12" >
+        <div class="input-field col s6">
+          <input value="" id="nombre" type="text" class="validate" ng-model="nombre">
+          <label class="active" for="nombre">Nombre</label>
+        </div>
+        <div class="input-field col s6">
+          <input value="" id="telefono" type="number" class="validate" ng-model="telefono">
+          <label class="active" for="telefono">Telefono</label>
+        </div>
+
+        <div class="row">
+          <div class="row">
+            <div class="input-field col s6">
+              <input value="" id="pelicula" type="text" class="validate" ng-model="pelicula">
+              <label class="active" for="pelicula">Pelicula</label>
+            </div>
+          <div class="input-field col s6">
+            <input value="" id="genero" type="text" class="validate" ng-model="genero">
+            <label class="active" for="genero">Genero</label>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row">
+            <div class="input-field col s12">
+              <input value="" id="email" type="text" class="validate" ng-model="correo">
+              <label class="active" for="email">Email</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="row">
+            <div class="input-field col s12">
+              <input value="" id="comentarios" type="text" class="validate" ng-model="comentarios">
+              <label class="active" for="comentarios">Comentarios</label>
+            </div>
+          </div>
+        </div>
+        <div class="center">
+          <a class="waves-effect waves-light btn-large" ng-click="guardar()">Enviar</a>
+        </div>
+        </div>
+      </form>
+        </div>
+        </div> 
+         <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Ultimos Pedidos</h5>
+          <br><br>
+        </div>
+        
+        <table >
+          <thead><tr><th>Nombre</th><th>Telefono</th><th>Pelicula</th><th>Genero</th><th>Comentarios</th><th>Correo</th></tr></thead>
+         <tbody>
+          <tr ng-repeat="x in poblarlista">
+           <td>{{ x.nombre }}</td>
+            <td>{{ x.telefono }}</td>
+            <td>{{ x.pelicula }}</td>
+            <td>{{ x.genero }}</td>
+            <td>{{ x.comentarios }}</td>
+             <td>{{ x.correo }}</td>
+           </tr>
+          </tbody>
+        </table>
+        </div>
+        </div>
+        </div>
+           <!--Termina showPedidos-->
+
+        <!-- Empieza show-Watchmen-->
+
+      <div ng-show=showWatchmen>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Watchmen</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://static.vix.com/es/sites/default/files/styles/large/public/btg/comics.batanga.com/files/Por-que-watchmen-es-una-genialidad-de-los-comics-3.jpg?itok=LgTHBa-S" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5> Watchmen</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>Zack Snyder</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Lloyd Levin /
+                    Lawrence Gordon /Deborah Snyder</td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Alex Tse /
+                    David Hayter</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>Watchmen de Alan Moore</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Tyler Bates</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>Larry Fong</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PVjA0y78_EQ" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-watchmen-->
+
+          <!-- Empieza show-Avengers-->
+
+      <div ng-show=showAvengers>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Avengers</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="https://i.ytimg.com/vi/48fKIXlxaXk/maxresdefault.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5> Avengers</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>Joss Whedon</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Kevin Feige
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Joss Whedon</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>The Avengers</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Alan Silvestri</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>Seamus McGarvey</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/eOrNdBpGMv8" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Avengers-->
+
+        <!-- Empieza show-Fantastic-->
+
+      <div ng-show=showFantastic>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Fant4Stic</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="https://i.ytimg.com/vi/qvSPmNs64tk/maxresdefault.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5> Fant4Stic</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>Tim Story</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Silver Butler
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Michael France</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td> Los 4 Fantásticos</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>John Ottman</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>Oliver Wood</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/kSxI4m2vlss" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Fantastic-->
+
+        <!-- Empieza show-Capitan-->
+
+      <div ng-show=showCapitan>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Capitan America</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://mx.cdn01.mundotkm.com/2015/10/Capit_n-Am_rica442121875.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>Capitan America</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>Tim Story</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Silver Butler
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Michael France</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td> Los 4 Fantásticos</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>John Ottman</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>Oliver Wood</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dKrVegVI0Us" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Capitan-->
+          
+         <!-- Empieza show-Hulk-->
+
+      <div ng-show=showHulk>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Hulk</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="https://i.ytimg.com/vi/YmtbFQvTphg/maxresdefault.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>Hulk</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>Ang Lee</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Avi Arad
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>James Schamus</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>  Hulk</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Danny Elfman</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>Frederick Elmes</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xbqNb2PFKKA" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Hulk-->
+
+         <!-- Empieza show-Xmen-->
+
+      <div ng-show=showXmen>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Xmen</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://blogdesuperheroes.es/wp-content/plugins/BdSGallery/BdSGaleria/27864.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>Xmen</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>Bryan Singer</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Lauren Shuler Donner
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>David Hayter</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>Xmen</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Michael Kamen</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>Newton Thomas Sigel</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/bvyJfspGN3E" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Xmen-->
+
+        <!-- Empieza show-Thor-->
+
+      <div ng-show=showThor>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Thor</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="https://i.blogs.es/7a0cce/thor-2011-posters/original.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>Thor</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>Kenneth Branagh</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Kevin Feige
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Ashley Edward Miller</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>Thor</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Patrick Doyle</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>Haris Zambarloukos</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Rgs6U3HnLv8" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Thor-->
+
+        <!-- Empieza show-Civil-->
+
+      <div ng-show=showCivil>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Civil War</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://e.studio92.com/normal/2016/04/29/050705_129704.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>Civil War</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>Hermanos Russo</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Kevin Feige
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Christopher Markus</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>Civil War</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td> Henry Jackman</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>  Trent Opaloch</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/dKrVegVI0Us" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Civil-->
+
+        <!-- Empieza show-Conjuro-->
+
+      <div ng-show=showConjuro>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">El Conjuro</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://www.garuyo.com/web/media/images/images/El-conjuro.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>El Conjuro</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>  James Wan</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Tony DeRosa-Grund
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>  Chad Hayes</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>El Conjuro</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Joseph Bishara</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>John R. Leonetti</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/chAT_cFcQk0" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Conjuro-->
+
+        <!-- Empieza show-Huerfana-->
+
+      <div ng-show=showHuerfana>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">La Huerfana</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://www.demasiadocine.com/wp-content/uploads/2009/09/la-huerfana.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>La Huerfana</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>  Jaume Collet-Serra</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Joel Silver
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>  David Leslie Johnson</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>La Huerfana</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>John Ottman</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>Jeff Cutter</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gsHuk7EARdA" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Huerfana-->
+
+        <!-- Empieza show-TheBoy-->
+
+      <div ng-show=showTheBoy>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">The Boy</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="https://i.ytimg.com/vi/LFhQv8GitF8/hqdefault.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>The Boy</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>William Brent Bell</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Matt Berenson
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Stacey Menear</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>The Boy</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Bear McCreary</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>Daniel Pearl</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/XGbB9UQ6r1g" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-TheBoy-->
+
+        <!-- Empieza show-Hallowen-->
+
+      <div ng-show=showHalloween>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Halloween</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://2.bp.blogspot.com/-UzUpD44rdOs/UXcn4AYjLGI/AAAAAAAAtnQ/zk_YUGYn3_M/s1600/halloween-1978.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>Halloween</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>John Carpenter</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Debra Hill
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>John Carpenter</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>Halloween</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>John Carpenter</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>Donald Pleasence</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/xHuOtLTQ_1I" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Hallowen-->
+
+        <!-- Empieza show-Saw1-->
+
+      <div ng-show=showSaw1>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Saw 1</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://1.bp.blogspot.com/-_XxEUO588JU/TxqRUoJYY3I/AAAAAAAAA3Y/nXJDmD-qIJs/s1600/saw_1.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>Saw 1</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>James Wan</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Oren Koules
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Leigh Whannell</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>SAW</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Charlie Clouser</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>David A. Armstrong</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OCZp5v8V-94" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Saw1-->
+
+        <!-- Empieza show-Saw2-->
+
+      <div ng-show=showSaw2>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Saw 2</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://trailers.apple.com/trailers/lions_gate/saw_2/images4/main.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>Saw 2</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>James Wan</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Oren Koules
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Leigh Whannell</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>SAW</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Charlie Clouser</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>David A. Armstrong</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GBDBu4GJqCg" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Saw2-->
+
+        <!-- Empieza show-Saw3-->
+
+      <div ng-show=showSaw3>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Saw 3</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://www.mundodescargas.com/2k6/servicios/especiales/saw_3/imagenes/fondos_psp/saw_1.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>Saw 3</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>James Wan</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Oren Koules
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Leigh Whannell</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>SAW</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Charlie Clouser</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>David A. Armstrong</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7TneUK9si2I" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Saw3-->
+
+        <!-- Empieza show-Saw4-->
+
+      <div ng-show=showSaw4>
+      <div class="row">
+        <div class="col s12 m3 l1"></div>
+        <div class="col s12 m6 l10 white">
+        <div class="col s12 m3 l3"></div>
+        <div class="col s12 m6 l6 white center">
+          <h5 class="post">Saw 4</h5>
+          <br><br>
+        </div>
+        <div class="container">
+          <div class="col s12 m6 l12">
+            <div class="portadaPeli">
+              <a href="#"><img class="desvanecer" src="http://images.fanpop.com/images/image_uploads/Saw-4-saw-792070_1280_1024.jpg" width="450" height="280"></a>
+            </div>
+            <br><br>
+
+            <section class="center-align card-panel blue-grey lighten-2"> 
+              <h5>Saw 4</h5>
+              <table class="striped">
+                <thead>
+                  <tr>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Director</td>
+                    <td>James Wan</td>
+                  </tr>
+                  <tr>
+                    <td>Producción</td>
+                    <td>Oren Koules
+                      </td>
+                  </tr>
+                  <tr>
+                    <td>Guión</td>
+                    <td>Leigh Whannell</td>
+                  </tr>
+                  <tr>
+                    <td>Basada en</td>
+                    <td>SAW</td>
+                  </tr>
+                  <tr>
+                    <td>Música</td>
+                    <td>Charlie Clouser</td>
+                  </tr>
+                  <tr>
+                    <td>Fotografía</td>
+                    <td>David A. Armstrong</td>
+                  </tr>
+                </tbody>
+               </table>
+            </section>
+            <br><br>
+          <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PYQ75b89PPw" frameborder="0" allowfullscreen></iframe>
+          </div>
+          <br><br>
+            <div class="center">
+              <a class="waves-effect waves-light btn-large" ng-click="mostrarInicio()">Regresar</a>
+            </div> 
+          </div>
+        </div>
+        </div> 
+        </div>
+        </div>
+
+        <!-- Termina show-Saw4-->
+        
+
+
+
+
+
+
+        </div>
+
+
+     
+    
+      
+
+
+
+
+
+
+     
+
+
+
+
+
+
+  <footer class="page-footer light-blue accent-4" >
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12 ">
+          <h5 class="white-text">Acerca de Peliculas-HD</h5>
+          <p class="grey-text text-lighten-4">La mejores peliculas en HD</p>
+        </div>
+        <div class="col l4 offset-l2 s12 ">
+          <h5 class="white-text">Redes Sociales</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">Facebook</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Twitter</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Metroflog</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+        © 2017 Todos los derechos reservados
+        <a class="grey-text text-lighten-4 right" href="#!">Instituto Tecnologico de Chihuahua ll</a>
+      </div>
+    </div>
+  </footer>
+</body>
